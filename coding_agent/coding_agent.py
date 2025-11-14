@@ -153,7 +153,7 @@ workspace_path = Path("./mnt").resolve()
 approvals = ApprovalTracker()
 editor = WorkspaceEditor(workspace_path, approvals, auto_approve=True)
 tool = ApplyPatchTool(editor=editor)
-shell_tool = ShellTool(executor=ShellExecutor())
+shell_tool = ShellTool(executor=ShellExecutor(cwd=workspace_path))
 
 coding_agent = Agent(
     name="CodingAgent",
