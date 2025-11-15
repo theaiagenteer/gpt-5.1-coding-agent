@@ -1,240 +1,260 @@
-# Agency Swarm GitHub Template
+# GPT-5.1 Coding Agent Template
 
-A production-ready template for deploying [Agency Swarm](https://github.com/VRSEN/agency-swarm) agencies with Docker containerization and automated deployment to the [Agencii](https://agencii.ai/) cloud platform.
+<div align="center">
 
-**🌐 [Agencii](https://agencii.ai/)** - The official cloud platform for Agency Swarm deployments  
-**🔗 [GitHub App](https://github.com/apps/agencii)** - Automated deployment integration
+**Deploy your own AI coding agent in just a few clicks!**
 
----
+[🚀 Deploy on Agencii.ai](https://agencii.ai)
 
-## 🚀 Quick Start
+_Production-ready coding agent powered by GPT-5.1 with OpenAI's new Apply Patch and Shell tools_
 
-### 1. Use This Template
-
-Click **"Use this template"** to create your own repository, or:
-
-```bash
-git clone https://github.com/your-username/agency-github-template.git
-cd agency-github-template
-```
-
-> **🌐 For Production**: Sign up at [agencii.ai](https://agencii.ai/) and use this template for automated cloud deployment
-
-### 2. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Set Up Environment Variables
-
-Create a `.env` file in the root directory:
-
-```bash
-# Required
-OPENAI_API_KEY=your_openai_api_key_here
-
-# Optional - Add any additional API keys your agents need
-# EXAMPLE_API_KEY=your_api_key_here
-```
-
-### 4. Test the Example Agency
-
-```bash
-python agency.py
-```
-
-This runs the example agency in terminal mode for testing.
-
-> **💡 Pro Tip**: For creating your own agency, open this template in [Cursor IDE](https://cursor.sh/) and use the AI assistant with the `.cursor/rules/workflow.mdc` file for automated agency creation!
+</div>
 
 ---
 
-## 🏗️ Project Structure
+## 🎯 Overview
 
-```
-agency-github-template/
-├── agency.py                 # Main entry point
-├── requirements.txt          # Python dependencies
-├── Dockerfile               # Container configuration
-├── .env                     # Environment variables (create this)
-├── example_agent/           # Your agency folder
-    ├── __init__.py
-    ├── example_agent.py
-    ├── instructions.md
-    ├── files/               # Local files accessible to the agent (via files_folder)
-    └── tools/
-        └── ExampleTool.py
-├── example_agent2/
-├── agency_manifesto.md  # Shared instructions
-├── requirements.txt
-├── .env
-└──...
-```
+This is a ready-to-use template for building your own AI coding agent similar to Lovable, Codex, or Cursor. Built on GPT-5.1, this agent leverages OpenAI's newly released developer tools to write code, execute commands, generate images, and build complete applications autonomously.
+
+**What makes this special?** OpenAI fine-tuned GPT-5.1 specifically for these tools, making it significantly more capable at coding tasks than previous models. This is the same technology powering Codex CLI.
 
 ---
 
-## 🔧 Creating Your Own Agency
+## ✨ What's Included
 
-### 🤖 **AI-Assisted Agency Creation with Cursor**
+- **GPT-5.1 Coding Agent** with adaptive reasoning and conversational output
+- **OpenAI's Apply Patch Tool** for precise code modifications
+- **Shell Execution Tool** for running commands and testing code
+- **Image Generation Tool** for creating web assets and graphics
+- **Web Search Tool** for finding documentation and solutions
+- **Plan Management** for complex multi-step tasks
+- **Production-ready deployment** configuration for Agencii.ai
 
-This template includes **AI-powered agency creation** using Cursor IDE:
+---
 
-1. **Open this project in Cursor IDE**
+## 🚀 Quick Start (Local)
 
-2. **Use the AI Assistant** to create your agency by referencing:
+### Prerequisites
+
+- Python 3.10+
+- OpenAI API key with GPT-5.1 access
+
+### Setup
+
+1. **Clone the repository**
+
+   ```bash
+   git clone <your-repo-url>
+   cd gpt-5.1-coding-agent
    ```
-   📁 .cursor/rules/workflow.mdc
+
+2. **Create virtual environment**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
-3. **Simply ask the AI:**
 
-   > "Create a new agency using the .cursor workflow"
+3. **Install dependencies**
 
-   The AI will guide you through the complete 7-step process:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-   - ✅ PRD Creation
-   - ✅ Folder Structure Setup
-   - ✅ Tool Development
-   - ✅ Agent Creation
-   - ✅ Agency Configuration
-   - ✅ Testing & Validation
-   - ✅ Iteration & Refinement
+4. **Configure environment**
 
-### 📋 **What the AI Will Do For You**
+   ```bash
+   cp .env.template .env
+   ```
 
-The AI assistant will automatically:
+   Add your OpenAI API key to `.env`:
 
-- Create proper folder structures
-- Generate agent classes and instructions
-- Build custom tools with full functionality
-- Set up communication flows
-- Create the main agency file
-- Test everything to ensure it works
+   ```
+   OPENAI_API_KEY=your_key_here
+   ```
 
-### 🚀 **Manual Alternative (Advanced Users)**
+5. **Run the agent**
 
-If you prefer manual setup, replace the `ExampleAgency/` folder with your own agency structure following the Agency Swarm conventions.
+   ```bash
+   python agency.py
+   ```
 
-### Agency Structure Requirements
-
-Your agency must follow this structure:
-
-- **Agency Folder**: Contains all agents and manifesto
-- **Agent Folders**: Each agent has its own folder with:
-  - `AgentName.py` - Agent class definition
-  - `instructions.md` - Agent-specific instructions
-  - `tools/` - Folder containing agent tools
-- **agency_manifesto.md** - Shared instructions for all agents
+6. **Test it out!**
+   Try prompts like:
+   - "Build a simple snake game"
+   - "Create a portfolio website with Next.js"
+   - "Build a to-do app with React and Tailwind"
 
 ---
 
-## 🚀 Production Deployment with Agencii
+## ☁️ Deploy on Agencii.ai (Production)
 
-### **🌐 Deploy to Agencii Cloud Platform**
+### Step 1: Prepare Your Repository
 
-For production deployment, use the [Agencii](https://agencii.ai/) platform:
+1. Commit your changes to GitHub:
+   ```bash
+   git add .
+   git commit -m "Initial setup"
+   git push origin main
+   ```
 
-#### **Step 1: Create Account & Use Template**
+### Step 2: Deploy to Agencii.ai
 
-1. **Sign up** at [agencii.ai](https://agencii.ai/)
-2. **Use this template** to create your repository
-3. **Develop your agency** using Cursor IDE with `.cursor` workflow
+1. Go to [Agencii.ai](https://agencii.ai)
+2. Click **"New Agency"**
+3. Select your GitHub repository
+4. Click on the repository name to deploy
 
-#### **Step 2: Install GitHub App**
+### Step 3: Enable Persistent Storage ⚠️
 
-1. **Install** the [Agencii GitHub App](https://github.com/apps/agencii)
-2. **Grant permissions** to your repository
-3. **Configure** environment variables in Agencii dashboard
+**IMPORTANT:** For this coding agent to work properly, you must enable persistent storage:
 
-#### **Step 3: Deploy**
+1. Go to your agency settings on Agencii.ai
+2. Navigate to the **"Advanced"** tab
+3. Enable **"Persistent Storage"**
 
-1. **Push to main branch** - Agencii automatically detects and deploys
-2. **Monitor deployment** in your Agencii dashboard
-3. **Access your live agency** via provided endpoints
+This ensures that files created by your agent (code, websites, applications) are saved and accessible between sessions.
 
-### **🔄 Automatic Deployments**
+### Step 4: Deploy as Web App or Custom GPT
 
-- **Auto-deploy** on every push to `main` branch
-- **Zero-downtime** deployments with rollback capability
-- **Environment management** through Agencii dashboard
+1. Select your deployed agency
+2. Go to **"Appearance"** settings
+3. Click **"Deploy"**
+4. Share your custom coding agent with others!
 
----
+### 🎉 Coming Soon
 
-## 🔨 Development Workflow
+**Better support for coding agents on the Agencii.ai platform is launching next week!** This includes:
 
-### **🎯 Recommended: AI-Assisted Development**
-
-1. **Open Cursor IDE** with this template
-2. **Ask the AI**: _"Create a new agency using the .cursor workflow"_
-3. **Follow the guided process** - the AI handles everything automatically
-4. **Test your agency**: `python agency.py`
-5. **Deploy to production**: Install [Agencii GitHub App](https://github.com/apps/agencii) and push to main
-
-### **⚙️ Manual Development (Advanced)**
-
-If you prefer hands-on development:
-
-1. **Create Tools**: Build agent tools in `tools/` folders
-2. **Configure Agents**: Write `instructions.md` and agent classes
-3. **Test Locally**: Run `python agency.py`
-4. **Deploy**: Push to your preferred platform
-
-The `.cursor/rules/workflow.mdc` file contains the complete development specifications for manual implementation.
+- Enhanced event handling for real-time code execution
+- Improved file persistence and workspace management
+- Better debugging and logging capabilities
+- Optimized streaming for tool outputs
 
 ---
 
-## 📚 Key Features
+## 🛠️ Customization Guide
 
-- **🌐 Agencii Cloud Deploy**: One-click deployment to [Agencii platform](https://agencii.ai/)
-- **🤖 AI-Assisted Creation**: Built-in Cursor IDE workflow for automated agency development
-- **🔄 Auto-Deploy**: Automatic deployment on push to main branch
-- **🚀 Ready-to-Deploy**: Dockerfile and requirements included
-- **🔧 Modular Structure**: Easy to customize and extend
-- **🛠️ Example Implementation**: Complete working example
-- **📦 Container Ready**: Docker configuration for any platform
-- **🔒 Environment Management**: Secure API key handling via Agencii dashboard
-- **🧪 Local Testing**: Terminal demo for development
-- **📋 Guided Workflow**: 7-step process with AI assistance
+### Modify Agent Instructions
+
+Edit `coding_agent/instructions.md` to customize your agent's behavior:
+
+```markdown
+# Your Custom Instructions
+
+You are a [your specialty] coding agent...
+
+## Your Custom Workflow
+
+1. Step one...
+2. Step two...
+```
+
+You can base your instructions on system prompts from popular AI coding tools:
+
+- [Codex CLI](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/tree/main/Emergent) - OpenAI's official coding agent (this template already uses these instructions)
+- [Cursor](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/tree/main/Cursor%20Prompts) - IDE integration focused
+- [Lovable](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/tree/main/Lovable) - Web development focused
+- [Windsurf](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/tree/main/Windsurf) - Cascade AI flow
+- [Replit](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/tree/main/Replit) - Cloud development focused
+- [v0](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/tree/main/v0%20Prompts%20and%20Tools) - Vercel's UI generation agent
+- [Devin](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/tree/main/Devin%20AI) - Autonomous software engineer
+- [Browse all system prompts](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) - 30,000+ lines of AI tool prompts
+
+### Add Custom Tools
+
+Tell cursor / claude code:
+
+```
+Create a new tool that [describe the tool actions and requirements] for the coding agent.
+```
 
 ---
 
-## 📖 Learn More
+## 📖 Example Use Cases
 
-- **[Agency Swarm Documentation](https://agency-swarm.ai/)**
-- **[Agency Swarm GitHub](https://github.com/VRSEN/agency-swarm)**
+### Build a Complete Web Application
+
+```
+"Create a modern portfolio website with Next.js and Tailwind CSS.
+Include a hero section, projects grid, about section, and contact form.
+Generate appropriate images for the design."
+```
+
+### Create a Game
+
+```
+"Build a snake game in JavaScript with HTML5 canvas.
+Include score tracking, speed increases, and game over screen."
+```
+
+### Refactor Existing Code
+
+```
+"Refactor the authentication module to use JWT tokens instead of sessions.
+Update all related endpoints and add proper error handling."
+```
+
+### Debug and Fix Issues
+
+```
+"The checkout flow is broken. Debug the issue, fix it, and add tests
+to prevent similar bugs in the future."
+```
+
+---
+
+## 🏗️ Architecture
+
+```
+├── coding_agent/
+│   ├── coding_agent.py          # Agent configuration
+│   ├── instructions.md          # Agent system prompt (customizable)
+│   └── tools/
+│       ├── apply_patch.py       # OpenAI's apply_patch tool
+│       ├── shell.py             # Command execution tool
+│       ├── OpenAIImageGenerationTool.py
+│       └── UpdatePlan.py        # Plan management
+├── agency.py                    # Agency setup and entry point
+├── shared_instructions.md       # Shared context for all agents
+└── requirements.txt             # Python dependencies
+```
 
 ---
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+This template is open source and contributions are welcome! Feel free to:
+
+- Add new tools
+- Improve instructions
+- Share your custom configurations
+- Report issues or bugs
 
 ---
 
-## ⚡ Quick Tips
+## 📺 Video Tutorial
 
-- **Start Small**: Begin with 1-2 agents and expand
-- **Test Tools**: Each tool should work independently
-- **Clear Instructions**: Write detailed agent instructions
-- **Environment Setup**: Always use `.env` for API keys
-- **Documentation**: Update instructions as you develop
+Watch the full video tutorial on YouTube to see this agent in action and learn how to customize it for your needs.
 
 ---
 
-**Ready to build your AI agency?** 🤖✨
+## 📝 License
 
-### 🌐 **Production Route (Recommended)**
+MIT License - feel free to use this template for your own projects!
 
-1. **Sign up** at [agencii.ai](https://agencii.ai/)
-2. **Use this template** to create your repository
-3. **Install** [Agencii GitHub App](https://github.com/apps/agencii)
-4. **Push to main** → Automatic deployment!
+---
 
-### 🛠️ **Development Route**
+## 🔗 Links
 
-Open this template in **Cursor IDE** and ask the AI to create your agency using the `.cursor` workflow. The AI will handle everything from setup to testing automatically!
+- [Agencii.ai Platform](https://agencii.ai) - Deploy your agent in production
+- [Agency Swarm Documentation](https://agency-swarm.ai) - Framework documentation
+- [Join the Community](https://skool.com/agency-ai) - School community for workshops and support
 
-For manual development, replace the `ExampleAgency` with your own implementation and start deploying intelligent agent systems!
+---
+
+<div align="center">
+
+**Built with ❤️ using Agency Swarm and GPT-5.1**
+
+</div>
