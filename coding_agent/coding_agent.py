@@ -18,7 +18,7 @@ coding_agent = Agent(
     model_settings=ModelSettings(
         reasoning=Reasoning(
             effort="medium",
-            summary="auto",
+           
         ),
     ),
 )
