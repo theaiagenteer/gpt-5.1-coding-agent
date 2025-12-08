@@ -5,7 +5,7 @@ from coding_agent.tools import apply_patch, shell_tool, OpenAIImageGenerationToo
 
 coding_agent = Agent(
     name="CodingAgent",
-    description="A gpt-5.1-based coding assistant template with no tools or instructions configured.",
+    description="A gpt-5.1-based coding assistant ",
     instructions="./instructions.md",
     model="gpt-5.1-codex",
     tools = [
