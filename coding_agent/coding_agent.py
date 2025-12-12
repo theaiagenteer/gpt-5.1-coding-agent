@@ -7,7 +7,7 @@ coding_agent = Agent(
     name="CodingAgent",
     description="Vibe Code Any Website",
     instructions="./instructions.md",
-    model="gpt-5.2-thinking",
+    model="gpt-5.2-2025-12-11",
     tools = [
         apply_patch,
         shell_tool,
