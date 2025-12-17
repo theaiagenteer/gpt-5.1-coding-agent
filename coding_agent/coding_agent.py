@@ -1,8 +1,7 @@
 from agents import ModelSettings
 from agency_swarm import Agent, WebSearchTool
 from openai.types.shared import Reasoning
-from coding_agent.tools import apply_patch, shell_tool, OpenAIImageGenerationTool, update_plan
-
+from coding_agent.tools import apply_patch, shell_tool, OpenAIImageGenerationTool, update_plan, DeployTool
 coding_agent = Agent(
     name="CodingAgent",
     description="Vibe Code Any Website",
@@ -14,6 +13,7 @@ coding_agent = Agent(
         WebSearchTool(),
         OpenAIImageGenerationTool,
         update_plan,
+		    DeployTool
     ],
     model_settings=ModelSettings(
         reasoning=Reasoning(
